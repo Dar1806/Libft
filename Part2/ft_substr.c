@@ -6,7 +6,7 @@
 /*   By: nmeunier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 15:32:38 by nmeunier          #+#    #+#             */
-/*   Updated: 2025/11/12 16:37:53 by nmeunier         ###   ########.fr       */
+/*   Updated: 2025/11/12 17:50:03 by nmeunier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (subs);
 }
 
+/*
 int	main(int ac, char **av)
 {
 	if (ac == 4)
 		printf("%s\n", ft_substr(av[1], atoi(av[2]), atoi(av[3])));
 }
+*/
