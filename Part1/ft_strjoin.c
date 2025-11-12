@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
@@ -40,8 +39,10 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	return (new);
 }
 
+/*
 int	main(int ac, char **av)
 {
 	if (ac == 3)
 		printf("%s\n", ft_strjoin(av[1], av[2]));
 }
+*/
