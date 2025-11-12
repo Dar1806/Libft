@@ -6,7 +6,7 @@
 /*   By: nmeunier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 16:58:53 by nmeunier          #+#    #+#             */
-/*   Updated: 2025/11/12 17:44:05 by nmeunier         ###   ########.fr       */
+/*   Updated: 2025/11/12 17:48:39 by nmeunier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,8 +44,10 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	return (new);
 }
 
+/*
 int	main(int ac, char **av)
 {
 	if (ac == 3)
 		printf("%s\n", ft_strjoin(av[1], av[2]));
 }
+*/
