@@ -6,7 +6,7 @@
 /*   By: nmeunier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 16:58:53 by nmeunier          #+#    #+#             */
-/*   Updated: 2025/11/12 17:48:39 by nmeunier         ###   ########.fr       */
+/*   Updated: 2025/11/12 18:06:44 by nmeunier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,40 +14,25 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int	i;
-	int	j;
+	size_t	lens1;
+	size_t	lens2;
 	char	*new;
 
-	i = 0;
-	j = 0;
-	new = 0;
-	while (s1[i])
-		i++;
-	while (s2[j])
-		j++;
-	new = (char *)malloc(sizeof(char) * (i + j) + 1);
+	lens1 = ft_strlen(s1);
+	lens2 = ft_strlen(s2);
+	new = (char *)malloc(sizeof(char) * (lens1 + lens2) + 1);
 	if (!new)
 		return (0);
-	i = 0;
-	j = 0;
-	while (s1[i])
-	{
-		new[i] = s1[i];
-		i++;
-	}
-	while (s2[j])
-	{
-		new[i + j] = s2[j];
-		j++;
-	}
-	new[i + j] = '\0';
+	if (s1)
+		ft_memcpy(new, s1, lens1);
+	if (s2)
+		ft_memcpy(new + lens1, s2, lens2);
+	new[lens1 + lens2] = '\0';
 	return (new);
 }
 
-/*
 int	main(int ac, char **av)
 {
 	if (ac == 3)
 		printf("%s\n", ft_strjoin(av[1], av[2]));
 }
-*/
