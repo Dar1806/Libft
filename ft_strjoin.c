@@ -6,7 +6,7 @@
 /*   By: nmeunier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 16:58:53 by nmeunier          #+#    #+#             */
-/*   Updated: 2025/11/14 11:36:04 by nmeunier         ###   ########.fr       */
+/*   Updated: 2025/11/12 18:06:44 by nmeunier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,28 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t	lens1;
-	size_t	lens2;
+	int	i;
+	int	j;
 	char	*new;
 
-	lens1 = ft_strlen(s1);
-	lens2 = ft_strlen(s2);
-	new = (char *)malloc(sizeof(char) * (lens1 + lens2) + 1);
+	if (!s1 || !s2)
+		return(0);
+	new = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
 	if (!new)
 		return (0);
-	if (s1)
-		ft_memcpy(new, s1, lens1);
-	if (s2)
-		ft_memcpy(new + lens1, s2, lens2);
-	new[lens1 + lens2] = '\0';
+	i =0;
+	while (s1[i])
+	{
+		new[i] = s1[i];
+		i++;
+	}
+	j = 0;
+	while (s2[j])
+	{
+		new[i + j] = s2[j];
+		j++;
+	}
+	new[i + j] = '\0';
 	return (new);
 }
 
