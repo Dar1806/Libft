@@ -33,11 +33,3 @@ char	*ft_strdup(const char *s)
 	dest[i] = '\0';
 	return (dest);
 }
-
-/*
-int	main(int ac, char ** av)
-{
-	if (ac == 2)
-		printf("%s\n", ft_strdup(av[1]));
-}
-*/

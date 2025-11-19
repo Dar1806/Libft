@@ -6,7 +6,7 @@
 /*   By: nmeunier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/07 15:37:28 by nmeunier          #+#    #+#             */
-/*   Updated: 2025/11/11 11:29:49 by nmeunier         ###   ########.fr       */
+/*   Updated: 2025/11/19 08:20:46 by nmeunier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,3 @@ void	ft_bzero(void *s, size_t n)
 		i++;
 	}
 }
-
-/*
-int	main(int ac, char **av)
-{
-	if (ac == 3)
-		ft_bzero(av[1], atoi(av[2]));
-}
-*/

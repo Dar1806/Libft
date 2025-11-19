@@ -6,20 +6,20 @@
 /*   By: nmeunier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/14 14:43:39 by nmeunier          #+#    #+#             */
-/*   Updated: 2025/11/14 17:18:15 by nmeunier         ###   ########.fr       */
+/*   Updated: 2025/11/19 07:55:37 by nmeunier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isc(char s, char c)
+static int	ft_isc(char s, char c)
 {
 	if (s == c)
 		return (1);
 	return (0);
 }
 
-int	ft_count(char *s, char c)
+static int	ft_count(const char *s, char c)
 {
 	int	i;
 	int	cmp;
@@ -40,24 +40,20 @@ int	ft_count(char *s, char c)
 	return (cmp);
 }
 
-char	*ft_stock(char *str, char c)
+static char	*ft_stock(const char *str, char c)
 {
 	int		i;
 	int		len;
 	char	*dest;
 
-	i = 0;
 	len = 0;
-	while (!ft_isc(str[i], c) && str[i])
-	{
-		i++;
+	while (str[len] && !ft_isc(str[len], c))
 		len++;
-	}
-	dest = malloc(sizeof(char) * len + 1);
-	if (!len)
-		return (0);
+	dest = malloc(sizeof(char) * (len + 1));
+	if (!dest)
+		return (NULL);
 	i = 0;
-	while (str[i] && !ft_isc(str[i], c))
+	while (i < len)
 	{
 		dest[i] = str[i];
 		i++;
@@ -66,47 +62,53 @@ char	*ft_stock(char *str, char c)
 	return (dest);
 }
 
+static int	process(const char **str, char c, char **tab, int *j)
+{
+	char	*nvstr;
+	int		k;
+
+	while (**str && ft_isc(**str, c))
+		(*str)++;
+	if (!**str)
+		return (0);
+	nvstr = ft_stock(*str, c);
+	if (!nvstr)
+	{
+		k = 0;
+		while (k < *j)
+			free(tab[k++]);
+		free(tab);
+		return (-1);
+	}
+	tab[*j] = nvstr;
+	(*j)++;
+	while (**str && !ft_isc(**str, c))
+		(*str)++;
+	return (0);
+}
+
 char	**ft_split(char const *s, char c)
 {
-	char	**tab;
-	int		count;
-	int		i;
-	int		j;
+	char		**tab;
+	const char	*str;
+	int			count;
+	int			j;
+	int			res;
 
-	i = 0;
-	j = 0;
-	count = ft_count((char *)s, c);
+	if (!s)
+		return (NULL);
+	count = ft_count(s, c);
 	tab = malloc(sizeof(char *) * (count + 1));
 	if (!tab)
-		return (0);
-	while (s[i])
+		return (NULL);
+	j = 0;
+	str = s;
+	while (*str)
 	{
-		while (s[i] && ft_isc(s[i], c))
-			i++;
-		if (s[i] && !ft_isc(s[i], c))
-		{
-			tab[j] = ft_stock((char *)s + i, c);
-			j++;
-			while (s[i] && !ft_isc(s[i], c))
-				i++;
-		}
+		res = process(&str, c, tab, &j);
+		if (res == -1)
+			return (NULL);
 	}
-	tab[j] = '\0';
+	tab[j] = NULL;
 	return (tab);
 }
-
-/*
-int	main(int ac, char **av)
-{
-	char	**tab;
-	int		i;
-
-	i = 0;
-	tab = ft_split(av[1], av[2][0]);
-	if (ac == 3)
-	{
-		while (tab[i])
-			printf("%s\n", tab[i++]);
-	}
-}
-*/

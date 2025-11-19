@@ -6,7 +6,7 @@
 /*   By: nmeunier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 17:34:16 by nmeunier          #+#    #+#             */
-/*   Updated: 2025/11/06 11:34:39 by nmeunier         ###   ########.fr       */
+/*   Updated: 2025/11/12 17:54:27 by nmeunier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,3 @@ int	ft_isdigit(int c)
 		return (1);
 	return (0);
 }
-
-/*
-int	main(int ac, char **av)
-{
-	if (ac == 2)
-		printf("%d\n", ft_isdigit(atoi(av[1])));
-}
-*/

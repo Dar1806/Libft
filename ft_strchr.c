@@ -27,10 +27,3 @@ char	*ft_strchr(const char *str, int c)
 		return ((char *)&str[i]);
 	return (NULL);
 }
-/*
-int	main(int ac, char **av)
-{
-	if (ac == 3)
-		printf("%s\n", ft_strchr(av[1], atoi(av[2])));
-}
-*/

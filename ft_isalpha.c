@@ -19,11 +19,3 @@ int	ft_isalpha(int c)
 	else
 		return (0);
 }
-
-/*
-int	main(int ac, char **av)
-{
-	if (ac == 2)
-		printf("%d\n", ft_isalpha(atoi(av[1])));
-}
-*/

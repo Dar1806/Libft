@@ -24,11 +24,3 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (s);
 }
-
-/*
-int	main(int ac, char **av)
-{
-	if (ac == 4)
-		printf("%s\n", (char *)ft_memset(av[1], atoi(av[2]), atoi(av[3])));
-}
-*/

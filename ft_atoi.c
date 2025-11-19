@@ -6,7 +6,7 @@
 /*   By: nmeunier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/07 12:51:44 by nmeunier          #+#    #+#             */
-/*   Updated: 2025/11/07 14:22:05 by nmeunier         ###   ########.fr       */
+/*   Updated: 2025/11/19 08:20:38 by nmeunier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,3 @@ int	ft_atoi(const char *str)
 	}
 	return (sign * nbr);
 }
-
-/*
-int	main()
-{
-	printf("%d\n", ft_atoi("\n 42"));
-}
-*/

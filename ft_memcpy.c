@@ -26,16 +26,3 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-
-/*
-#include <string.h>
-int	main(int ac, char **av)
-{
-	if (ac == 4)
-	{
-		printf("%s\n", (char *)ft_memcpy(av[1], av[2], atoi(av[3])));
-		printf("%s\n", (char *)memcpy(av[1], av[2], atoi(av[3])));
-	}
-		
-}
-*/

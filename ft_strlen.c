@@ -21,14 +21,3 @@ int	ft_strlen(const char *str)
 		i++;
 	return (i);
 }
-
-/*
-int	main(int ac, char **av)
-{
-
-	if (ac == 2)
-	{
-		printf("%d\n", ft_strlen(av[1]));
-	}
-}
-*/

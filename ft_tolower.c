@@ -18,11 +18,3 @@ int	ft_tolower(int c)
 		c += 32;
 	return (c);
 }
-
-/*
-int	main(int ac, char **av)
-{
-	if (ac == 2)
-		printf("%d\n", ft_tolower(atoi(av[1])));
-}
-*/

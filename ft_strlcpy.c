@@ -29,11 +29,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	dst[i] = '\0';
 	return (src_len);
 }
-
-/*
-int	main(int ac, char **av)
-{
-	if (ac == 4)
-		printf("%s\n", ft_strlcpy(av[1], av[2], atoi(av[3])));
-}
-*/

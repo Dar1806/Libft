@@ -28,16 +28,3 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return ((char *)dest);
 }
-
-/*
-int	main(int ac, char **av)
-{
-	if (ac == 4)
-	{
-		printf("fausse fct : %s\n", (char *)ft_memmove(av[1],
-			av[2], atoi(av[3])));
-		printf("vrai fct :%s\n", (char *)memmove(av[1],
-			av[2], atoi(av[3])));
-	}
-}
-*/

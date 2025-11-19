@@ -33,11 +33,3 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (0);
 }
-
-/*
-int	main(int ac, char **av)
-{
-	if (ac == 4)
-		printf("%s\n", ft_strnstr(av[1], av[2], atoi(av[3])));
-}
-*/

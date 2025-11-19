@@ -6,7 +6,7 @@
 /*   By: nmeunier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 17:40:53 by nmeunier          #+#    #+#             */
-/*   Updated: 2025/11/06 11:33:44 by nmeunier         ###   ########.fr       */
+/*   Updated: 2025/11/19 08:21:03 by nmeunier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,3 @@ int	ft_isalnum(int c)
 	else
 		return (0);
 }
-
-/*
-int	main(int ac, char **av)
-{
-	if (ac == 2)
-	{
-		printf("%d\n", ft_isalnum(atoi(av[1])));
-	}
-}
-*/

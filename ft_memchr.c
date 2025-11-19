@@ -27,16 +27,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (0);
 }
-
-/*
-#include <string.h>
-
-int	main(int ac, char **av)
-{
-	if (ac == 4)
-	{
-		printf("%s\n", (char *)ft_memchr(av[1], atoi(av[2]), atoi(av[3])));
-		printf("%s\n", (char *)memchr(av[1], atoi(av[2]), atoi(av[3])));
-	}
-}
-*/
