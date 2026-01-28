@@ -1,3 +1,5 @@
+This project has been created as part of the 42 curriculum by nmeunier.
+
 # Libft - C Library Implementation
 
 A comprehensive C library implementing standard C library functions and additional utilities. This project is part of the 42 Common Core curriculum.
