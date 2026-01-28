@@ -109,32 +109,6 @@ Compile with the library:
 gcc -Wall -Wextra -Werror your_program.c -L. -lft -o your_program
 ```
 
-## Example
-
-```c
-#include "libft.h"
-#include <stdio.h>
-
-int main(void)
-{
-    char *str1 = "Hello";
-    char *str2 = " World";
-    
-    // String concatenation
-    char *result = ft_strjoin(str1, str2);
-    printf("%s\n", result);  // Output: Hello World
-    
-    // String length
-    printf("%d\n", ft_strlen(str1));  // Output: 5
-    
-    // Character search
-    printf("%s\n", ft_strchr(str1, 'l'));  // Output: lo
-    
-    free(result);
-    return (0);
-}
-```
-
 ## Project Structure
 
 - `libft.h` - Header file with function declarations
